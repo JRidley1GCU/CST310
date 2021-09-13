@@ -1,4 +1,27 @@
 
+var canvas;
+var gl;
+
+var points = [];
+
+var numTimesToSubdivide = 0;
+
+var bufferId;
+
+function init()
+{
+  canvas = document.getElementById( "gl-canvas" );
+
+  gl = WebGLUtils.setupWebGL( canvas );
+  if ( !gl ) { alert( "WebGL isn't available" ); }
+
+  //
+  //  Initialize our data for the Sierpinski Gasket
+  //
+
+  // First, initialize the corners of our gasket with three points.
+
+
   //
   //  Configure WebGL
   //
@@ -83,3 +106,4 @@ function render()
   points = [];
   //requestAnimFrame(render);
 }
+
